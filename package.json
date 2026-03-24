@@ -82,9 +82,8 @@
     "wuyinzhao"
   ],
   "dependencies": {
-    "dayjs": "^1.11.20",
-    "rc-picker": "^2.7.6",
-    "@ant-design/icons": "^4.8.3",
-    "antd": "4.24.12"
+    "@ant-design/icons": "~5.6.1",
+    "antd": "~5.29.3",
+    "dayjs": "^1.11.20"
   }
 }

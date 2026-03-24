@@ -1,9 +1,8 @@
-import { Select } from 'antd';
+import { DatePicker, Select } from 'antd';
 import dayjs from 'dayjs';
 import localeData from 'dayjs/plugin/localeData';
 import weekday from 'dayjs/plugin/weekday';
 import { useEffect, useState } from 'react';
-import DatePicker from '../date-collection/date-picker';
 
 dayjs.extend(weekday);
 dayjs.extend(localeData);

@@ -85,7 +85,7 @@ const complexTree = (props: any) => {
 
   // 搜索
   const onChangeSearch = (e: any) => {
-    if (isEmpty(e)) return;
+    if (isEmpty(e.target)) return;
     let value = e.target.value;
     setSearchValue(value);
     const result: any = getTreeDataForSearch(value);
@@ -101,13 +101,14 @@ const complexTree = (props: any) => {
 
   return (
     <div
-      id="complex_tree"
+      id="complex-tree"
       className={collapsed ? 'complex-tree-shrink' : ''}
       style={{
         width: `${width}px`,
         minWidth: `${width}px`,
         maxWidth: `${width}px`,
         flex: `0 0 ${width}px`,
+        height: '100%',
       }}
     >
       <div className="collapsed" onClick={() => setCollapsed(!collapsed)}>

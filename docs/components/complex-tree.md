@@ -22,7 +22,7 @@ toc: content
 
 <code src="./demos/complex-tree/basic.tsx"></code>
 
-### 按住 Ctrl 键可进行子节点勾选
+<!-- ### 按住 Ctrl 键可进行子节点勾选
 
 <code src="./demos/complex-tree/ctrl.tsx"></code>
 
@@ -33,7 +33,7 @@ toc: content
 ### 不需要按住 ctrl 的父子联动
 
 tips:父节点也为真实节点所以子节点全部选中时父节点不会自动勾选
-<code src="./demos/complex-tree/check-strictly-tree.tsx"></code>
+<code src="./demos/complex-tree/check-strictly-tree.tsx"></code> -->
 
 ## API
 

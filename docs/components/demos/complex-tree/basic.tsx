@@ -1,5 +1,4 @@
 import { ComplexTree } from '@yss-rui/components';
-import { Card } from 'antd';
 import { useState } from 'react';
 
 const treeData = [
@@ -18,15 +17,13 @@ export default () => {
   const [checkedKeys, setCheckedKeys] = useState<string[]>(['1-1']);
 
   return (
-    <Card title="ComplexTree 基础示例">
-      <div style={{ height: 360, border: '1px solid #f0f0f0' }}>
-        <ComplexTree
-          treeData={treeData}
-          checkedKeys={checkedKeys}
-          onClickCheck={(keys: string[]) => setCheckedKeys(keys)}
-          switcherIcon
-        />
-      </div>
-    </Card>
+    <div style={{ height: 360, border: '1px solid #f0f0f0' }}>
+      <ComplexTree
+        treeData={treeData}
+        checkedKeys={checkedKeys}
+        onClickCheck={(keys: string[]) => setCheckedKeys(keys)}
+        switcherIcon
+      />
+    </div>
   );
 };

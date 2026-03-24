@@ -1,7 +1,7 @@
+export { default as CustomSelect } from './TreeSelect';
 export { default as Chart } from './chart';
 export { default as ChartTooltip } from './chart/chartTooltip';
 export { default as ComplexTree } from './complex-tree';
-export { default as DatePicker } from './date-collection/date-picker';
 export { default as DateRangePicker } from './date-range';
 export { default as DateRangeUtils } from './date-range/utils';
 export { default as EndDate } from './end-date';
@@ -18,4 +18,3 @@ export { default as SecondHeader } from './table-second-header';
 export { default as TableTabs } from './table-tabs';
 export { default as TableUtils } from './table/utils';
 export { default as TitleTooltip } from './title-tooltip';
-export { default as CustomSelect } from './TreeSelect';

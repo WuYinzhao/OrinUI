@@ -1,12 +1,10 @@
-import { Select } from 'antd';
-import { useEffect, useState } from 'react';
-import DatePicker from '../date-collection/date-picker';
-
+import { DatePicker, Select } from 'antd';
 import dayjs from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import localeData from 'dayjs/plugin/localeData';
 import quarterOfYear from 'dayjs/plugin/quarterOfYear';
 import weekday from 'dayjs/plugin/weekday';
+import { useEffect, useState } from 'react';
 
 dayjs.extend(weekday);
 dayjs.extend(localeData);
