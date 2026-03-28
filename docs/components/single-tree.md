@@ -17,9 +17,17 @@ toc: content
 
 ## 代码演示
 
-### 基础用法
+### 常规使用
 
 <code src="./demos/single-tree/basic.tsx"></code>
+
+### 禁用左侧收起按钮
+
+<code src="./demos/single-tree/no-switch-icon.tsx"></code>
+
+### 使用 size（small,nomal,large）
+
+<code src="./demos/single-tree/size-tree.tsx"></code>
 
 ## API
 

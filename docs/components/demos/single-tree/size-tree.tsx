@@ -21,7 +21,8 @@ export default () => {
           treeData={treeData}
           selectedKeys={selectedKeys}
           onSelectKeys={(key) => setSelectedKeys(key)}
-          showSwitcher
+          showSwitcher={false}
+          size="small"
         />
       </div>
     </Card>
