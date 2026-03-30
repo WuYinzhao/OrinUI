@@ -18,20 +18,15 @@
 - [DateRangePicker 日期范围](/components/date-range)
 - [SingleDate 结束日期](/components/single-date)
 - [ExcelHandle Excel 解析](/components/excel-handle)
-- [CustomSelect 树形选择](/components/tree-select)
+- [CustomSelect 带全选的选择器](/components/tree-select)
 
 ### 反馈与布局
 
 - [CustomModal 弹窗](/components/modal)
+- [Styled 布局样式](/components/styled)
 
 ### 表格相关
 
-- [TableHeader 表头栏](/components/table-header)
-- [OperateTable 操作表格容器](/components/table-operate)
-- [SecondHeader 二级表头](/components/table-second-header)
+- [OperateBar 操作条](/components/operate-bar)
+- [TitleBar 表格说明栏](/components/title-bar)
 - [TableTabs 表格页签](/components/table-tabs)
-
-### 其他
-
-- [TitleTooltip 标题说明](/components/title-tooltip)
-- [Styled 布局样式](/components/styled)

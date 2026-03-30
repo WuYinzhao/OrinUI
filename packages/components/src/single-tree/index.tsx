@@ -34,6 +34,7 @@ export default (props: any) => {
         height: 'calc(100% - 24px)',
       }}
       className={[
+        'single-tree',
         `sider-tree-${size}`,
         showSwitcher ? 'show-switcher' : '',
       ].join(' ')}

@@ -1,5 +1,5 @@
 ---
-title: SecondHeader 二级表头
+title: TitleBar 表格说明栏
 nav:
   title: 组件
   order: 14
@@ -19,7 +19,7 @@ toc: content
 
 ### 基础用法
 
-<code src="./demos/table-second-header/basic.tsx"></code>
+<code src="./demos/title-bar/basic.tsx"></code>
 
 ## API
 

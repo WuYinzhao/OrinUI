@@ -1,5 +1,5 @@
 ---
-title: TableHeader 表头栏
+title: OperateBar 操作条
 nav:
   title: 组件
   order: 12
@@ -19,8 +19,8 @@ toc: content
 
 ### 基础用法
 
-<code src="./demos/table-header/basic.tsx"></code>
+<code src="./demos/operate-bar/basic.tsx"></code>
 
 ## API
 
-详见源码 `packages/components/src/table-header/`。
+详见源码 `packages/components/src/operate-bar/`。

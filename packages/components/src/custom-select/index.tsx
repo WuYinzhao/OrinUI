@@ -2,7 +2,7 @@ import { TreeSelect } from 'antd';
 import { useMemo, useState } from 'react';
 import TreeRender from './treeRender';
 
-export const Component = (props: any) => {
+export default (props: any) => {
   const {
     treeData = [],
     value = [],
@@ -28,6 +28,7 @@ export const Component = (props: any) => {
       treeCheckable={true}
       fieldNames={fieldNames}
       treeData={treeData}
+      open={true}
       onChange={(value) => {
         onChange(value);
       }}
@@ -35,7 +36,7 @@ export const Component = (props: any) => {
         setSearchValue(value);
       }}
       value={value}
-      dropdownRender={(node) => {
+      popupRender={(node) => {
         return (
           <TreeRender
             hasData={treeData.length > 0 ? true : false}
@@ -50,10 +51,7 @@ export const Component = (props: any) => {
           </TreeRender>
         );
       }}
-      showArrow
       {...other}
     ></TreeSelect>
   );
 };
-
-export default Component;

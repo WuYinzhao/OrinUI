@@ -1,10 +1,10 @@
 ---
-title: TableTabs 表格页签
+title: CustomTabs 页签
 nav:
   title: 组件
   order: 15
 group:
-  title: 表格相关
+  title: 页签
   order: 2
 toc: content
 ---
@@ -19,8 +19,8 @@ toc: content
 
 ### 基础用法
 
-<code src="./demos/table-tabs/basic.tsx"></code>
+<code src="./demos/custom-tabs/basic.tsx"></code>
 
 ## API
 
-详见源码 `packages/components/src/table-tabs/`。
+详见源码 `packages/components/src/custom-tabs/`。

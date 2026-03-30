@@ -19,7 +19,7 @@ toc: content
 
 ### 基础用法
 
-<code src="./demos/tree-select/basic.tsx"></code>
+<code src="./demos/custom-select/basic.tsx"></code>
 
 ## API
 

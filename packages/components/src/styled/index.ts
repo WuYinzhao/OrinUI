@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LayoutDiv = styled.div`
+export const Page = styled.div`
   display: flex;
   height: 100%;
 `;
@@ -19,13 +19,13 @@ export const Header = styled.div`
   padding: 16px 24px 0;
 `;
 
-export const ContentForm = styled.div`
+export const FormContent = styled.div`
   position: relative;
   width: 100%;
   display: flex;
   background: #fff;
 `;
-export const ContentLeft = styled.div`
+export const FormQuery = styled.div`
   position: relative;
   flex: 1;
   display: flex;
@@ -35,19 +35,15 @@ export const ContentLeft = styled.div`
   }
 `;
 
-export const ContentRight = styled.div`
+export const FormButton = styled.div`
   position: relative;
 `;
 
-export const ContainerContent = styled.div`
+export const TableContent = styled.div`
   width: 100%;
   flex: 1;
   overflow: auto;
   background: #fff;
-`;
-
-export const TableContent = styled.div`
-  position: relative;
 `;
 
 export const EchartsContent = styled.div`
@@ -57,13 +53,12 @@ export const EchartsContent = styled.div`
 
 export default () => {
   return {
-    LayoutDiv,
+    Page,
     Content,
     Header,
-    ContentForm,
-    ContentLeft,
-    ContentRight,
-    ContainerContent,
+    FormContent,
+    FormQuery,
+    FormButton,
     TableContent,
     EchartsContent,
   };

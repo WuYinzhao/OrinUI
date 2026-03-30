@@ -8,7 +8,6 @@ checkboxOption  data数据
 */
 export default (props: any) => {
   const {
-    width = 280,
     checkboxOption,
     defaultValue,
     fieldNames = { id: 'id', name: 'name' },
@@ -16,7 +15,6 @@ export default (props: any) => {
     isSingle = true,
   } = props;
   const { id, name } = fieldNames;
-  const [collapsed, setCollapsed] = useState(false);
   const [values, setValues] = useState<any[]>([]);
   useEffect(() => {
     if (defaultValue?.length) {
