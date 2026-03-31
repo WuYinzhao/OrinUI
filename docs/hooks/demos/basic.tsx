@@ -1,4 +1,4 @@
-import { useObserverHeight } from '@yss-rui/hooks';
+import { useObserverHeight } from '@OrinUI/hooks';
 import { Card } from 'antd';
 import { useRef } from 'react';
 

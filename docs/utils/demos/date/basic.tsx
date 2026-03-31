@@ -1,4 +1,4 @@
-import { getEndDate, getStartDate } from '@yss-rui/utils';
+import { getEndDate, getStartDate } from '@OrinUI/utils';
 import { Card, Space, Typography } from 'antd';
 
 export default () => {

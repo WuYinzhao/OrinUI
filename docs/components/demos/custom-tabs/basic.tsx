@@ -1,4 +1,4 @@
-import { CustomTabs } from '@yss-rui/components';
+import { CustomTabs } from '@OrinUI/components';
 import { Card } from 'antd';
 import { useState } from 'react';
 

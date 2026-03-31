@@ -1,4 +1,4 @@
-import { DataProcess, treeToArray } from '@yss-rui/utils';
+import { DataProcess, treeToArray } from '@OrinUI/utils';
 import { Card, Space, Typography } from 'antd';
 
 const headerTree = [

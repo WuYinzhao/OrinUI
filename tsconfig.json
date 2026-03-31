@@ -9,16 +9,14 @@
     "paths": {
       "@/*": ["packages/*"],
       "@@/*": [".dumi/tmp/*"],
-      "yss-rui": ["src"],
-      "yss-rui/*": ["src/*", "*"],
-      "@yss-rui/components": ["packages/components/src"],
-      "@yss-rui/components/*": ["packages/components/src/*"],
-      "@yss-rui/hooks": ["packages/hooks/src"],
-      "@yss-rui/hooks/*": ["packages/hooks/src/*"],
-      "@yss-rui/utils": ["packages/utils/src"],
-      "@yss-rui/utils/*": ["packages/utils/src/*"],
-      "@yss-rui/ai-skills": ["packages/ai-skills/src"],
-      "@yss-rui/ai-skills/*": ["packages/ai-skills/src/*"]
+      "@OrinUI/components": ["packages/components/src"],
+      "@OrinUI/components/*": ["packages/components/src/*"],
+      "@OrinUI/hooks": ["packages/hooks/src"],
+      "@OrinUI/hooks/*": ["packages/hooks/src/*"],
+      "@OrinUI/utils": ["packages/utils/src"],
+      "@OrinUI/utils/*": ["packages/utils/src/*"],
+      "@OrinUI/ai-skills": ["packages/ai-skills/src"],
+      "@OrinUI/ai-skills/*": ["packages/ai-skills/src/*"]
     }
   },
   "references": [

@@ -4,13 +4,13 @@ import * as path from 'path';
 export default defineConfig({
   outputPath: 'docs-dist',
   alias: {
-    '@yss-rui/components': path.resolve(__dirname, 'packages/components/src'),
-    '@yss-rui/hooks': path.resolve(__dirname, 'packages/hooks/src'),
-    '@yss-rui/utils': path.resolve(__dirname, 'packages/utils/src'),
-    '@yss-rui/ai-skills': path.resolve(__dirname, 'packages/ai-skills/src'),
+    '@OrinUI/components': path.resolve(__dirname, 'packages/components/src'),
+    '@OrinUI/hooks': path.resolve(__dirname, 'packages/hooks/src'),
+    '@OrinUI/utils': path.resolve(__dirname, 'packages/utils/src'),
+    '@OrinUI/ai-skills': path.resolve(__dirname, 'packages/ai-skills/src'),
   },
   themeConfig: {
-    name: 'YSS组件库',
+    name: 'OrinUI',
     nav: [
       { title: '指南', link: '/guide' },
       { title: '组件', link: '/components' },

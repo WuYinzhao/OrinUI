@@ -1,4 +1,4 @@
-import { Chart, ChartTooltip } from '@yss-rui/components';
+import { Chart, ChartTooltip } from '@OrinUI/components';
 const { tooltipFormate } = ChartTooltip;
 
 export default () => {

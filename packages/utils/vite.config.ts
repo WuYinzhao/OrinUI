@@ -36,7 +36,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: resolve('src/index.ts'),
-      name: 'yssSsfUtils',
+      name: 'OrinUtils',
       fileName: (format) => `[name].js`,
       formats: ['es', 'cjs'],
     },

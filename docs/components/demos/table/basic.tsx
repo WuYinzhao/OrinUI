@@ -1,4 +1,4 @@
-import { Table } from '@yss-rui/components';
+import { Table } from '@OrinUI/components';
 import { Card } from 'antd';
 
 const columns = [

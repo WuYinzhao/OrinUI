@@ -1,4 +1,4 @@
-import { formatTableData } from '@yss-rui/utils';
+import { formatTableData } from '@OrinUI/utils';
 import { Card, Space, Typography } from 'antd';
 
 /**

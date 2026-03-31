@@ -2,7 +2,7 @@ import {
   deepAddField,
   mergeFieldsOnTree,
   setDisabledByCondition,
-} from '@yss-rui/utils';
+} from '@OrinUI/utils';
 import { Card, Space, Tree, Typography } from 'antd';
 import { useMemo } from 'react';
 

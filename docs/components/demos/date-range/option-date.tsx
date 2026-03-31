@@ -1,4 +1,4 @@
-import { DateRangePicker, DateRangeUtils } from '@yss-rui/components';
+import { DateRangePicker, DateRangeUtils } from '@OrinUI/components';
 import { Card } from 'antd';
 import { useState } from 'react';
 

@@ -1,7 +1,7 @@
 ---
 hero:
-  title: YSS
-  description: 社保项目基于react的组件库
+  title: OrinUI
+  description: 基于react的组件库
   actions:
     - text: 立即开始
       link: /doc
@@ -18,4 +18,4 @@ features:
     description: Put ! description here
 ---
 
-yss-rui
+OrinUI

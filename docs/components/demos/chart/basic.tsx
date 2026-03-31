@@ -1,4 +1,4 @@
-import { Chart } from '@yss-rui/components';
+import { Chart } from '@OrinUI/components';
 
 export default () => {
   const optionDefault = {

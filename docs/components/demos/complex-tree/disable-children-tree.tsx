@@ -1,4 +1,4 @@
-import { ComplexTree } from '@yss-rui/components';
+import { ComplexTree } from '@OrinUI/components';
 import { useState } from 'react';
 
 const treeData = [

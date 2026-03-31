@@ -1,4 +1,4 @@
-import { DateRangeUtils } from '@yss-rui/components';
+import { DateRangeUtils } from '@OrinUI/components';
 import { Card, Space, Typography } from 'antd';
 import dayjs from 'dayjs';
 const {

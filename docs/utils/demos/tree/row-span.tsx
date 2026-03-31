@@ -1,4 +1,4 @@
-import { getRowSpan } from '@yss-rui/utils';
+import { getRowSpan } from '@OrinUI/utils';
 import { Card, Table, Typography } from 'antd';
 
 const raw = [

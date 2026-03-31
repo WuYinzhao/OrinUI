@@ -1,4 +1,4 @@
-import { getFirstOrDefault, openObjectArry, unitOption } from '@yss-rui/utils';
+import { getFirstOrDefault, openObjectArry, unitOption } from '@OrinUI/utils';
 import { Card, Space, Typography } from 'antd';
 
 export default () => {

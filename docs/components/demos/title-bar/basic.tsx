@@ -1,5 +1,5 @@
 import { DownloadOutlined } from '@ant-design/icons';
-import { TitleBar } from '@yss-rui/components';
+import { TitleBar } from '@OrinUI/components';
 import { Card } from 'antd';
 
 export default () => {

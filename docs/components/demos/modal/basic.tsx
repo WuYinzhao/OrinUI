@@ -1,4 +1,4 @@
-import { CustomModal } from '@yss-rui/components';
+import { CustomModal } from '@OrinUI/components';
 import { Button, Card } from 'antd';
 import { useState } from 'react';
 

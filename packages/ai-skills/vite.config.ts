@@ -36,7 +36,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: resolve('src/index.ts'),
-      name: 'yssSsfAiSkills',
+      name: 'OrinAiSkills',
       fileName: () => `[name].js`,
       formats: ['es', 'cjs'],
     },

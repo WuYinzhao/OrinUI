@@ -40,7 +40,7 @@ yarn lint:css       # 仅 Stylelint
 
 ```
 ├── packages/
-│   ├── components/          # 主组件包 @ysstech-data/component-library
+│   ├── components/          # 主组件包 @OrinUI/component-library
 │   │   ├── src/             # 组件源码
 │   │   ├── dist/            # 构建产物 (es/lib)
 │   │   ├── vite.config.ts   # vite 构建配置
@@ -55,6 +55,7 @@ yarn lint:css       # 仅 Stylelint
 ## 组件包结构
 
 `packages/components/src/` 包含以下组件：
+
 - `base-table` - 基础表格 (支持虚拟滚动 virtuallist-antd)
 - `chart` - ECharts 图表封装
 - `sider-tree` - 侧边树

@@ -1,4 +1,4 @@
-import { ExcelHandle } from '@yss-rui/components';
+import { ExcelHandle } from '@OrinUI/components';
 import { Button, Card, Typography } from 'antd';
 import { useState } from 'react';
 

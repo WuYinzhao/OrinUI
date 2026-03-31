@@ -1,4 +1,4 @@
-import { ListTree } from '@yss-rui/components';
+import { ListTree } from '@OrinUI/components';
 import { Card } from 'antd';
 
 const checkboxOption = [

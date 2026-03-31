@@ -1,4 +1,4 @@
-import { TableUtils } from '@yss-rui/components';
+import { TableUtils } from '@OrinUI/components';
 import { Card, Space, Typography } from 'antd';
 
 export default () => {
@@ -8,7 +8,9 @@ export default () => {
   return (
     <Card title="TableUtils">
       <Space direction="vertical">
-        <Typography.Text>getCellColor(&apos;1&apos;): {JSON.stringify(c1)}</Typography.Text>
+        <Typography.Text>
+          getCellColor(&apos;1&apos;): {JSON.stringify(c1)}
+        </Typography.Text>
         <div>getCellText: {c2}</div>
       </Space>
     </Card>

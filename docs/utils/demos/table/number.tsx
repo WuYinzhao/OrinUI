@@ -4,7 +4,7 @@ import {
   handleData,
   multiply,
   roundToDecimalPlaces,
-} from '@yss-rui/utils';
+} from '@OrinUI/utils';
 import { Card, Space, Typography } from 'antd';
 
 export default () => {

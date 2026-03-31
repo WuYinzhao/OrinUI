@@ -1,4 +1,4 @@
-import { formateDateRange } from '@yss-rui/utils';
+import { formateDateRange } from '@OrinUI/utils';
 import { Card, Typography } from 'antd';
 
 export default () => {

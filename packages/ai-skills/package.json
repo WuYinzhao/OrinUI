@@ -1,5 +1,5 @@
 {
-  "name": "@yss-rui/ai-skills",
+  "name": "@OrinUI/ai-skills",
   "version": "0.0.1",
   "exports": {
     ".": {

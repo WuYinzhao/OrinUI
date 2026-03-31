@@ -1,4 +1,4 @@
-import { SingleDate, SingleDateUtils } from '@yss-rui/components';
+import { SingleDate, SingleDateUtils } from '@OrinUI/components';
 import { Card } from 'antd';
 import { useState } from 'react';
 

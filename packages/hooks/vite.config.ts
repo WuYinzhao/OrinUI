@@ -38,7 +38,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: resolve('src/index.ts'),
-      name: 'yssSsfHooks',
+      name: 'OrinUIHooks',
       fileName: (format) => `[name].js`,
       formats: ['es', 'cjs'],
     },

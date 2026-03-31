@@ -1,7 +1,7 @@
-# yss-rui
+# OrinUI
 
-[![NPM version](https://img.shields.io/npm/v/yss-rui.svg?style=flat)](https://npmjs.org/package/yss-rui)
-[![NPM downloads](http://img.shields.io/npm/dm/yss-rui.svg?style=flat)](https://npmjs.org/package/yss-rui)
+[![NPM version](https://img.shields.io/npm/v/OrinUI.svg?style=flat)](https://npmjs.org/package/OrinUI)
+[![NPM downloads](http://img.shields.io/npm/dm/OrinUI.svg?style=flat)](https://npmjs.org/package/OrinUI)
 
 A react library developed with dumi
 
@@ -29,18 +29,15 @@ A react library developed with dumi
 
 ### Import 约定
 
-- 跨包优先使用：`@yss-rui/*`
-  - 例如：`@yss-rui/components`、`@yss-rui/hooks`
+- 跨包优先使用：`@OrinUI/*`
+  - 例如：`@OrinUI/components`、`@OrinUI/hooks`
 - 包内使用：`@/`
   - 例如在 `packages/components` 内部使用 `@/components/...`
-- 根入口/别名
-  - `yss-rui` -> `src`
-  - `yss-rui/*` -> `src/*`
 
 ### TypeScript 配置
 
 - 基于根 `tsconfig.json` 的路径别名：
-  - `@yss-rui/components` / `@yss-rui/hooks` / `@yss-rui/utils` / `@yss-rui/ai-skills`
+  - `@OrinUI/components` / `@OrinUI/hooks` / `@OrinUI/utils` / `@OrinUI/ai-skills`
 - 子包各自 `tsconfig.json` 的 `@/*` 指向该包的 `src/*`
 
 ## 运行命令
@@ -100,10 +97,10 @@ pnpm doctor
 ```text
 .
 ├─ packages/
-│  ├─ components/     # @yss-rui/components
-│  ├─ hooks/          # @yss-rui/hooks
-│  ├─ utils/          # @yss-rui/utils
-│  └─ ai-skills/      # @yss-rui/ai-skills
+│  ├─ components/     # @OrinUI/components
+│  ├─ hooks/          # @OrinUI/hooks
+│  ├─ utils/          # @OrinUI/utils
+│  └─ ai-skills/      # @OrinUI/ai-skills
 ├─ docs/              # dumi 文档与 demo
 ├─ src/               # 根入口（示例/对外入口）
 ├─ .dumirc.ts         # dumi 配置
