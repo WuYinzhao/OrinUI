@@ -1,6 +1,8 @@
 {
   "name": "@OrinUI/utils",
   "version": "0.0.1",
+  "private": false,
+  "description": "OrinUI utils",
   "exports": {
     ".": {
       "types": "./dist/es/index.d.ts",

@@ -102,9 +102,6 @@ importers:
       echarts-liquidfill:
         specifier: ^3.1.0
         version: 3.1.0(echarts@5.6.0)
-      html2canvas:
-        specifier: ^1.4.1
-        version: 1.4.1
       lodash:
         specifier: ^4.17.21
         version: 4.17.23
