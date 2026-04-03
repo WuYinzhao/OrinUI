@@ -1,6 +1,6 @@
 {
   "name": "@orinui/utils",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1",
   "private": false,
   "description": "orinui utils",
   "keywords": [
@@ -44,6 +44,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "http://192.168.167.8:5001/"
   }
 }

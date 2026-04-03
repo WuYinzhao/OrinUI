@@ -1,6 +1,6 @@
 {
   "name": "@orinui/components",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1",
   "private": false,
   "description": "orinui components",
   "keywords": [
@@ -68,6 +68,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "http://192.168.167.8:5001/"
   }
 }
