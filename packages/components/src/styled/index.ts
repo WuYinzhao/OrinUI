@@ -44,7 +44,7 @@ export const TableContent = styled.div`
   flex: 1;
   overflow: auto;
   background: #fff;
-  margin: 24px;
+  padding: 24px;
 `;
 
 export const EchartsContent = styled.div`

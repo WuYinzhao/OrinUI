@@ -41,7 +41,7 @@ export default (props: VirtualTableProps<Record<string, unknown>>) => {
     isVirtualTable,
     virtualId = 'virtualTableid',
     lineHeight = 40,
-    paddingNum = 0,
+    paddingNum = 48,
   } = props;
 
   const paginationHieght = pagination ? 60 : 0;
