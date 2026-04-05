@@ -1,17 +1,28 @@
 @import '../styles/index.less';
 
-#independent {
+/**
+ * 表头/表体行高由 index.tsx 在根节点上设置 CSS 变量：
+ * --orinui-table-header-cell-height、--orinui-table-body-row-height
+ * 以下为编译期回退值，与 props 默认 singleHeaderHeight=40、listItemHeight=36 对齐。
+ */
+@orinui-table-header-fallback: 40px;
+@orinui-table-body-fallback: 36px;
+
+/**
+ * antd 5 Table：`className` 挂在 `.ant-table-wrapper` 上，使用 `.custom-table.ant-table-wrapper`。
+ * 虚拟表格表体为 `.ant-table-tbody-virtual` + `div.ant-table-row`（非 `<tr>`），行高需与 listItemHeight 一致。
+ */
+
+.custom-table.ant-table-wrapper {
+  // 纵向滚动条：标准表（.ant-table-body）
   .ant-table-body {
+    border-bottom: 1px solid #f0f0f0;
     .scrollbar();
+  }
 
-    table {
-      border-bottom: 1px solid #fff;
-    }
-
-    .virtuallist {
-      // 解决虚拟表格滚动条错乱问题
-      margin-bottom: 1px;
-    }
+  // 虚拟滚动列表容器（rc-virtual-list，前缀 .ant-table-tbody-virtual）
+  .ant-table-tbody-virtual {
+    .scrollbar();
   }
 
   .ant-table-header table {
@@ -24,37 +35,111 @@
     border: none;
   }
 
-  .ant-table-thead th,
-  .ant-table-thead td {
+  // 表头：高度由 --orinui-table-header-cell-height 驱动（antd 5 列分割线使用 th::before）
+  .ant-table-thead > tr > th,
+  .ant-table-thead > tr > td {
+    height: var(
+      --orinui-table-header-cell-height,
+      @orinui-table-header-fallback
+    );
+    min-height: var(
+      --orinui-table-header-cell-height,
+      @orinui-table-header-fallback
+    );
+    padding: 0 12px !important;
+    line-height: var(
+      --orinui-table-header-cell-height,
+      @orinui-table-header-fallback
+    );
     background: #f0f3f7;
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
     box-sizing: border-box;
     color: #04042c;
-    font-family: SourceHanSansCN-Medium;
+    font-family: SourceHanSansCN-Medium, sans-serif;
     font-weight: 500;
-    line-height: 20px;
-    padding: 10px 12px 9px;
+    vertical-align: middle;
 
     &.ant-table-cell-ellipsis {
       white-space: normal;
     }
 
     &::before {
-      height: 0;
+      display: none !important;
     }
   }
 
-  .ant-table-tbody tr:nth-child(odd),
-  .ant-table-tbody tr:nth-child(odd) .ant-table-cell-fix-left {
+  // 普通表体：行高由 --orinui-table-body-row-height 驱动
+  .ant-table-tbody > tr > td {
+    height: var(--orinui-table-body-row-height, @orinui-table-body-fallback);
+    min-height: var(
+      --orinui-table-body-row-height,
+      @orinui-table-body-fallback
+    );
+    padding: 0 12px !important;
+    line-height: var(
+      --orinui-table-body-row-height,
+      @orinui-table-body-fallback
+    );
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-family: SourceHanSansCN-Regular, sans-serif;
+    color: #323847;
+    font-weight: 400;
+    border-bottom: none !important;
+  }
+
+  // 虚拟表体：与 rc-virtual-list 行高（listItemHeight）一致
+  .ant-table-tbody-virtual .ant-table-row {
+    height: var(--orinui-table-body-row-height, @orinui-table-body-fallback);
+    min-height: var(
+      --orinui-table-body-row-height,
+      @orinui-table-body-fallback
+    );
+  }
+
+  .ant-table-tbody-virtual .ant-table-cell {
+    min-height: var(
+      --orinui-table-body-row-height,
+      @orinui-table-body-fallback
+    );
+    padding: 0 12px !important;
+    line-height: var(
+      --orinui-table-body-row-height,
+      @orinui-table-body-fallback
+    );
+    box-sizing: border-box;
+    font-family: SourceHanSansCN-Regular, sans-serif;
+    color: #323847;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    border-bottom: none !important;
+  }
+
+  // 斑马纹：标准表体（tr.ant-table-row）
+  .ant-table-tbody > tr.ant-table-row:nth-child(odd) > td {
     background: #f5f7fa;
   }
 
-  td {
-    padding: 10px 12px;
-    line-height: 16px;
-    font-family: SourceHanSansCN-Regular;
-    color: #323847;
-    font-weight: 400;
+  // 斑马纹：虚拟表体（div.ant-table-row）
+  .ant-table-tbody-virtual .ant-table-row:nth-child(odd) .ant-table-cell {
+    background: #f5f7fa;
+  }
+
+  // 固定列在 sticky 下会覆盖背景，与斑马纹对齐
+  .ant-table-tbody
+    > tr.ant-table-row:nth-child(odd)
+    > td.ant-table-cell-fix-left,
+  .ant-table-tbody
+    > tr.ant-table-row:nth-child(odd)
+    > td.ant-table-cell-fix-right,
+  .ant-table-tbody-virtual
+    .ant-table-row:nth-child(odd)
+    .ant-table-cell.ant-table-cell-fix-left,
+  .ant-table-tbody-virtual
+    .ant-table-row:nth-child(odd)
+    .ant-table-cell.ant-table-cell-fix-right {
+    background: #f5f7fa !important;
   }
 }

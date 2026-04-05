@@ -74,7 +74,6 @@ export default defineConfig({
         'echarts-for-react',
         'echarts-liquidfill',
         'styled-components',
-        'virtuallist-antd',
       ],
       output: [
         {

@@ -1,11 +1,12 @@
 import { Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
+import type { CSSProperties } from 'react';
 import { useEffect, useMemo, useState } from 'react';
-import { VList } from 'virtuallist-antd';
 import './index.less';
 import type { VirtualTableProps } from './type';
+import { sumLeafColumnWidths } from './utils';
 
-//  获取有几级表头
+/** 获取有几级表头（含 children 的复杂表头） */
 const calculateDepth = (
   arr: ColumnsType<Record<string, unknown>> | undefined,
   depth = 0,
@@ -22,8 +23,8 @@ const calculateDepth = (
   }
   return maxDepth;
 };
+
 /**
- *
  * @param props
  * lineHeight 表头行高
  * paddingNum=表格上下的边距24*2
@@ -34,51 +35,104 @@ export default (props: VirtualTableProps<Record<string, unknown>>) => {
     bordered = true,
     pagination = false,
     rowKey = 'id',
-    id = 'independent',
     height,
     columns,
     dataSource,
-    isVirtualTable,
-    virtualId = 'virtualTableid',
-    lineHeight = 40,
+    singleHeaderHeight = 40,
     paddingNum = 48,
+    virtual = false,
+    /** 虚拟表行高（px），需与样式中表体行高一致，默认 36 */
+    listItemHeight: listItemHeightProp,
+    isScroll: _isScroll,
+    scroll: scrollFromProps,
+    components: componentsFromProps,
+    className,
+    style,
+    ...rest
   } = props;
 
-  const paginationHieght = pagination ? 60 : 0;
+  /** 表体行高（px），与样式变量 --orinui-table-body-row-height、virtual listItemHeight 一致 */
+  const bodyRowPx = listItemHeightProp ?? 36;
+
+  const mergedStyle: CSSProperties = {
+    ...style,
+    ['--orinui-table-header-cell-height' as string]: `${singleHeaderHeight}px`,
+    ['--orinui-table-body-row-height' as string]: `${bodyRowPx}px`,
+  };
+
+  const paginationHeight = pagination ? 60 : 0;
 
   const [headerHeight, setHeaderHeight] = useState<number>(0);
-  // 计算表头高度
+
   const countHeight = () => {
     setTimeout(() => {
       let num = 0;
       const depth = calculateDepth(columns);
       if (columns) {
-        num += (depth + 1) * lineHeight;
+        num += (depth + 1) * singleHeaderHeight;
       }
       setHeaderHeight(num);
     });
   };
-  useEffect(countHeight, [columns, dataSource]);
-  useEffect(countHeight, []);
-  const vList = useMemo(
+
+  useEffect(countHeight, [columns, dataSource, singleHeaderHeight]);
+
+  const scrollYNumber = useMemo(
     () =>
-      VList({ vid: virtualId, resetTopWhenDataChange: false, height: height }),
-    [height, virtualId],
+      Math.max(
+        0,
+        Math.floor(height - headerHeight - paddingNum - paginationHeight),
+      ),
+    [height, headerHeight, paddingNum, paginationHeight],
   );
+
+  const mergedScroll = useMemo(() => {
+    const y =
+      scrollFromProps?.y !== undefined && scrollFromProps?.y !== null
+        ? scrollFromProps.y
+        : scrollYNumber;
+
+    if (!virtual) {
+      return {
+        ...scrollFromProps,
+        y,
+      };
+    }
+
+    const hasExplicitX =
+      scrollFromProps !== undefined &&
+      scrollFromProps !== null &&
+      scrollFromProps.x !== undefined &&
+      scrollFromProps.x !== null;
+
+    let x = scrollFromProps?.x;
+    if (!hasExplicitX) {
+      const w = sumLeafColumnWidths(columns);
+      x = (w > 0 ? w : 'max-content') as typeof x;
+    }
+
+    return {
+      ...scrollFromProps,
+      x,
+      y,
+    };
+  }, [scrollFromProps, scrollYNumber, virtual, columns]);
+
   return (
     <Table
-      id={id}
+      {...rest}
+      {...(virtual ? { listItemHeight: bodyRowPx } : {})}
       size={size}
+      className={['custom-table', className].filter(Boolean).join(' ')}
+      style={mergedStyle}
       bordered={bordered}
       pagination={pagination}
       rowKey={rowKey}
-      scroll={{
-        y: `${Math.floor(
-          height - headerHeight - paddingNum - paginationHieght,
-        )}px`,
-      }}
-      {...props}
-      components={isVirtualTable ? vList : undefined}
-    ></Table>
+      columns={columns}
+      dataSource={dataSource}
+      scroll={mergedScroll}
+      virtual={virtual}
+      components={componentsFromProps}
+    />
   );
 };
